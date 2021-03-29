@@ -292,7 +292,6 @@ form {
   }
 }
 
-
 /* Media Queries */ 
 @media (max-width: 1200px) {
   .two-col {
@@ -404,6 +403,10 @@ form {
 }
 
 @media (max-width: 500px) {
+  .two-col__testimonial {
+    width: 100%;
+  }
+
   .hero {
     height: 55vh;
     &__wrapper {

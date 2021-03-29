@@ -442,6 +442,9 @@ form input[type="email"]:focus {
 }
 
 @media (max-width: 500px) {
+  .two-col__testimonial {
+    width: 100%;
+  }
   .hero {
     height: 55vh;
   }
