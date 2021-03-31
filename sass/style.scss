@@ -98,6 +98,7 @@ img {
       content: '';
       background-image: url('../images/bg-curve-desktop.svg');
       background-size: cover;
+      background-position: center center;
       position: absolute;
       top: -60px;
       left: 0;
@@ -195,6 +196,10 @@ form {
     &:focus {
       outline: none;
     }
+
+    &::placeholder {
+      color: $light-gray;
+    }
   }
 }
 
@@ -288,9 +293,10 @@ form {
   font-size: 11px; text-align: center; 
 
   a {
-    color: hsl(228, 45%, 44%);
+    color: #fff;
   }
 }
+
 
 /* Media Queries */ 
 @media (max-width: 1200px) {
@@ -298,10 +304,6 @@ form {
     &__wrapper {
       flex: 100%;
       text-align: center;
-
-      img {
-        margin-bottom: $margin-lg;
-      }
 
     &:last-of-type {
       order: -1;
@@ -337,7 +339,7 @@ form {
     
     &__testimonial {
       text-align: left;
-      margin: 0 auto;
+      margin: $margin-md auto 0 auto;
     }
   }
 
@@ -383,17 +385,21 @@ form {
 }
 
 @media (max-width: 750px) {
+  .two-col {
+    &::before {
+      background-image: url('../images/bg-curve-mobile.svg');
+      height: 80px;
+  }
+}
   .hero {
     height: 40vh;
   }
 
   .navbar {
-    &__logo {
-      width: 80px;
-    }
+    flex-direction: column;
 
     &__item {
-      padding: 0;
+      padding: $padding-xs;
     }
 
     &__link {
@@ -403,10 +409,6 @@ form {
 }
 
 @media (max-width: 500px) {
-  .two-col__testimonial {
-    width: 100%;
-  }
-
   .hero {
     height: 55vh;
     &__wrapper {
